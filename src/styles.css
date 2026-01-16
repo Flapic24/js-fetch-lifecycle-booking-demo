@@ -1,0 +1,169 @@
+:root {
+  /* Brand */
+  --color-primary: #c9a86a;        /* gold */
+  --color-primary-dark: #b89552;
+  --color-primary-light: #e2c891;
+
+  /* Backgrounds */
+  --color-bg-main: #0f172a;        /* slate-900 */
+  --color-bg-card: #111827;        /* slate-800 */
+
+  /* Text */
+  --color-text-main: #e5e7eb;      /* gray-200 */
+  --color-text-muted: #9ca3af;     /* gray-400 */
+
+  /* Borders */
+  --color-border: #1f2933;
+}
+
+
+
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header {
+    text-align: center;
+    padding: 2rem, 1rem;
+    margin-bottom: 4rem;
+}
+
+.header-title {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.header-text {
+    font-weight: 200;
+    font-size: 1.25rem;
+}
+
+.menu-szolgaltatasok {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+/* Layout */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+/* Header fix */
+.page-header {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Service selector */
+.menu-szolgaltatasok ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.menu-szolgaltatasok button {
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-szolgaltatasok button:hover {
+  border-color: var(--color-primary);
+}
+
+/* Inputs + fetch */
+#date-picker,
+.fetch-slots {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#date-picker {
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.fetch-slots {
+  background: var(--color-primary);
+  color: #000;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fetch-slots:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Info + status */
+#selection-info,
+#status {
+  margin: 1rem 0;
+  color: var(--color-text-muted);
+}
+
+/* Slots list */
+.slots-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.slot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.slot-time {
+  font-weight: 600;
+}
+
+/* Slot actions */
+.slot-actions button {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.slot-actions button:hover {
+  background: var(--color-primary);
+  color: #000;
+}
+
+.slot-actions span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Error emphasis */
+#status p {
+  color: #f87171; /* red-400 */
+}
